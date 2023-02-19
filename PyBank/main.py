@@ -42,18 +42,18 @@ greatest_increase = [' ',0]
 greatest_decrease = [' ',999999999999999999999]
 
 # read the file to open (open with dictonary reader as it will pick up the 1st column header (keys) and add the correspondent values related to the keys (headers))
-with open(file_to_read) as Profit_data:
-  reader = csv.DictReader(Profit_data, delimiter=",")  
+with open(file_to_read) as budget_data:
+  reader = csv.DictReader(budget_data, delimiter=",")  
   # after read the file header, read the rows (check the csv.file for the header names to determine the row to read)
   for row in reader:
     total_months = total_months + 1 #start with month 0 and add 1 as it goes through the for loop
-    total =  total + int(row['profit/losses'])
+    total =  total + int(row['Profit/losses'])
 
 #calculate the profit-loss change by comparing the total rev. and append [] to the list above
 
-change_profit_losses=int(row['profit/losses'])-previous_profit_losses
-previous_profit_losses= int(row['profit/losses'])
-change_profit_losses_list= int(row['profit/losses'])+change_profit_losses_list
+change_profit_losses=int(row['Profit/Losses'])-previous_profit_losses
+previous_profit_losses= int(row['Profit/Losses'])
+change_profit_losses_list= int(row['Profit/Losses'])+change_profit_losses_list
 month_of_change=month_of_change+(row("Date"))
 
 #calculate the greatest increase Date and Amount by using an IF stmt
@@ -83,3 +83,8 @@ output =(
   f"Greatest Increase in Profit: {greatest_increase[0]} (${greatest_increase[1]})\n"
   f"Greatest Decrease in Profit: {greatest_decrease[0]} (${greatest_decrease[1]})\n"
  )
+
+print(output)
+
+with open(file_to_write,'w') as txt_file:
+  txt_file.write(output)
