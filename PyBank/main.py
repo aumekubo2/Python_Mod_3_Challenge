@@ -16,13 +16,9 @@
 import os
 import csv
 
-csvpath = os.path.join('..', 'Resources', 'contacts.csv')
-
-
-/c/Users/aumek/OneDrive/Desktop/Git_Personnal_Rep/Python_Challenge/Python_Mod_3_Challenge/Instructions
-
-  file_to_read = "~/OneDrive\Desktop\Git_Personnal_Rep\Python_Challenge\Python_Mod_3_Challenge\Instructions\PyBank\Resources>"
-  file_to_write =  "~/OneDrive/Desktop/Git_Personnal_Rep/Python_Challenge/Python_Mod_3_Challenge/Instructions/PyBank"
+# The next line is doing: file_to_read = '.\\Resources\\budget_data.csv'
+file_to_read = os.path.join('.', 'Resources', 'budget_data.csv')
+file_to_write = os.path.join('.', 'Analysis', 'PyBankAnalysis.txt')
 
   #Assign value to the variables we are going to calculate
 
