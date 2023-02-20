@@ -17,5 +17,5 @@ Greatest Decrease in Profit: Feb-14 ($-1825558)
 ````
 ![image link](https://github.com/aumekubo2/Python_Mod_3_Challenge/blob/main/revenue-per-lead.png)
 -----
-####[click to access the Coding for PyBank Analysis] (https://github.com/aumekubo2/Python_Mod_3_Challenge/blob/main/PyBank/main.py)
+####[Please click to access the Coding for PyBank Analysis] (https://github.com/aumekubo2/Python_Mod_3_Challenge/blob/main/PyBank/main.py)
 
