@@ -43,16 +43,17 @@ greatest_increase = ['',0]
 #The greatest decrease in profits (date and amount) over the entire period (the " " will be a placeholder for the month and year of the change, the number starts from a higher value and move to a lower value)
 greatest_decrease = ['',999999999999999999999]
 
-# read the file to open (open with dictonary reader as it will pick up the 1st column header (keys) and add the correspondent values related to the keys (headers))
+# read the file to open 
 with open(file_to_read) as budget_data:
   csvreader = csv.reader(budget_data, delimiter=',')  
 
-  header=next(csvreader)
+  csvheader = next(budget_data)
 
-  first_row=next (csvreader)
-  total_months+=1
-  total_Net+=int(first_row[1])
-  previous_profit_losses=int(first_row[1])
+  first_row = next (csvreader)
+  total_months += 1
+  total_Net += int(first_row[1])
+  previous_profit_losses = int(first_row[1])
+  
 
   # after read the file header, read the rows (check the csv.file for the header names to determine the row to read)
   for row in csvreader:
@@ -61,28 +62,29 @@ with open(file_to_read) as budget_data:
 
 #calculate the profit-loss change by comparing the total rev. and append [] to the list above
 
-change_profit_losses=int(row[1])-previous_profit_losses
-previous_profit_losses= int(row[1])
-change_profit_losses_list+= [change_profit_losses]
-month_of_change+=[row[0]]
+    change_profit_losses = int(row[1])-previous_profit_losses
+    previous_profit_losses = int(row[1])
+    change_profit_losses_list += [change_profit_losses]
+    month_of_change +=  [row[0]]
 
 #calculate the greatest increase Date and Amount by using an IF stmt
 
-if(change_profit_losses > greatest_increase[1]):
-  greatest_increase[0]= row[0]
-  greatest_increase[1]=change_profit_losses
+    if change_profit_losses > greatest_increase[1]:
+      greatest_increase[0] = row[0]
+      greatest_increase[1] = change_profit_losses
 
 
 #calculate the greatest decrease Date and Amount by using an IF stmt and append index
 
-if(change_profit_losses < greatest_decrease[1]):
-  greatest_decrease [0]= row[0]
-  greatest_decrease[1]=change_profit_losses
+    if change_profit_losses < greatest_decrease[1]:
+      greatest_decrease [0] = row[0]
+      greatest_decrease[1] = change_profit_losses
 
 
 #calculate the greatest increase Date and Amount by using an IF stmt
 
-Average_change = sum(change_profit_losses_list)/len(change_profit_losses_list)
+Average_change = round(sum(change_profit_losses_list)/len(change_profit_losses_list),2)
+
 
 #create the output file
 output =(
