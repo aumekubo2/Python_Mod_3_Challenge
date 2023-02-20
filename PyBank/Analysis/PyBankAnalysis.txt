@@ -1,0 +1,7 @@
+\Analysis
+--------------------------------
+Total Months:86
+total:($22564198)
+Average Profit Change: $-706444.0
+Greatest Increase in Profit:  ($0)
+Greatest Decrease in Profit: Feb-17 ($-706444)
