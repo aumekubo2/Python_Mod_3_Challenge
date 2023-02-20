@@ -6,11 +6,9 @@ cd # Python_Mod_3_Challenge
 
 -----
 
-
-```PyBank Analysis - results
-
 #*PyBank Analysis - results*
 
+```PyBank Analysis - results
 Total Months:86
 total:($22564198)
 Average Profit Change: $-8311.11
