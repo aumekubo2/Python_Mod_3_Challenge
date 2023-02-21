@@ -29,8 +29,8 @@ pyfile_to_write= os.path.join("Analysis","PyPoll_Analysis.txt")
 # last the winner of the election based on popular vote - max function
 
 Total_vote_cast = 0
-List_of_Candidates = [] #c.options
-Votes_by_candidate = {} #c.votes
+List_of_Candidates = [] 
+Votes_by_candidate = {} 
 Winner_name = " "
 Winner_votes_count = 0
 
@@ -87,7 +87,7 @@ with open(pyfile_to_write,'w') as txt_file:
         voter_output = f"{Candidate}: {vote_percentage}% ({votes})\n"
         print(voter_output)
         txt_file.write(voter_output)
-        
+
     # print the winner candidate name
     Winner_candidate_Summary = (
             f"----------------------\n"
