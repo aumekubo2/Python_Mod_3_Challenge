@@ -86,7 +86,8 @@ with open(pyfile_to_write,'w') as txt_file:
             Winner_name = Candidate
         voter_output = f"{Candidate}: {vote_percentage}% ({votes})\n"
         print(voter_output)
-
+        txt_file.write(voter_output)
+        
     # print the winner candidate name
     Winner_candidate_Summary = (
             f"----------------------\n"
